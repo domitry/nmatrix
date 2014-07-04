@@ -365,37 +365,6 @@ class NMatrix
       return x, y
     end
 
-    #
-    # call-seq:
-    #     linspace(a, b) -> NVector
-    #     linspace(a, b, n) -> NVector
-    #
-    # Returns a NVector with +n+ values of dtype +:float64+ equally spaced from
-    # +a+ to +b+, inclusive.
-    #
-    # See: http://www.mathworks.com/help/matlab/ref/linspace.html
-    #
-    # * *Arguments* :
-    #   - +a+ -> The first value in the sequence.
-    #   - +b+ -> The last value in the sequence.
-    #   - +n+ -> The number of elements. Default is 100.
-    # * *Returns* :
-    #   - NVector with +n+ +:float64+ values.
-    #
-    # Example:
-    #   x = NVector.linspace(0, Math::PI, 1000)
-    #   x.pretty_print
-    #     [0.0
-    #     0.0031447373909807737
-    #     0.006289474781961547
-    #     ...
-    #     3.135303178807831
-    #     3.138447916198812
-    #     3.141592653589793]
-    #   => nil
-    #
-
-
     {:bindgen => :byte, :indgen => :int64, :findgen => :float32, :dindgen => :float64,
      :cindgen => :complex64, :zindgen => :complex128,
      :rindgen => :rational128, :rbindgen => :object}.each_pair do |meth, dtype|
